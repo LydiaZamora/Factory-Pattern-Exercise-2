@@ -11,8 +11,10 @@ namespace FactoryPatternExercise2
                     return new ListDataAccess();
                 case "sql":
                     return new SQLDataAccess();
-                default:
+                case "mongo":
                     return new MongoDataAccess();
+                default:
+                    return new ListDataAccess();
             }
         }
     }
